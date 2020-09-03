@@ -4,8 +4,9 @@ import Link from 'next/link'
 import { Transition, Menu } from '@tailwindui/react'
 
 import { classNames } from '../../src/utils/class-names'
+import { PropsOf } from '../../src/types'
 
-function NextLink(props: { children: React.ReactNode } & JSX.IntrinsicElements['a']) {
+function NextLink(props: PropsOf<'a'>) {
   const { href, children, ...rest } = props
   return (
     <Link href={href}>
